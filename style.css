@@ -123,6 +123,12 @@ body {
     border-radius: 10px;
 }
 
+#empty {
+    display: none;
+    color: #c0392b;
+    font-style: italic;
+}
+
 .visuals {
     opacity: 1 !important;
     border-radius: 10px;

@@ -1,9 +1,16 @@
 
 var ul = document.getElementById('list')
 var li;
+var empty = document.getElementById('empty')
+
+let p = document.createElement('p')
+let textn = document.createTextNode('Enter todo : cannot be empty')
+p.appendChild(textn)
+empty.appendChild(p)
 
 var addbutton = document.getElementById('add')
 addbutton.addEventListener('click', additem)
+
 
 function additem() {
     var input = document.getElementById('input');
@@ -12,11 +19,9 @@ function additem() {
     var textnode = document.createTextNode(item)
 
     if (item === '') {
-        return false
-        // let p = document.createElement('p')
-        // let textn = document.createTextNode('Enter todo')
-        // p.appendChild(textn)
+        empty.style.display = 'block'
     } else {
+        empty.style.display = 'none'
         li = document.createElement('li')
         var checkbox = document.createElement('input')
         checkbox.type = 'checkbox'
